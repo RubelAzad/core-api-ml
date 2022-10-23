@@ -30,5 +30,11 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->post('/posts', 'PostController@store');
         $router->put('/posts/{id}', 'PostController@update');
         $router->delete('/posts/{id}', 'PostController@destroy');
+
+        $router->get('/mlAll', 'MhlController@getMlAll');
+        $router->post('/mlStore', 'MhlController@mlStore');
+
     });
+
+
 });
