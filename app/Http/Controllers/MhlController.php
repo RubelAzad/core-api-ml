@@ -80,14 +80,14 @@ class MhlController extends Controller
         
     }
     /**
-     * @method_name :- method_name
+     * @method_name :- mhmUpdate
      * -------------------------------------------------------- 
-     * @param  :-  {{}|any}
-     * ?return :-  {{}|any}
+     * @param  :-  $request, $id
+     * ?return :-  response()->json
      * author :-  API
      * created_by:- Abul Kalam Azad
      * created_at:- 24/10/2022 11:55:54
-     * description :- A method is simply a “chunk” of code.
+     * description :- id wise update
      */
     public function mlUpdate(Request $request, $id)
     {
