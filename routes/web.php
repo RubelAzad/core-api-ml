@@ -48,6 +48,16 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
         // subcription license router End
 
+        // subcription module router start
+
+        $router->get('/mhc', 'MhcController@getMhcAll');
+        $router->post('/mhc', 'MhcController@mhcStore');
+        $router->put('/mhc/{id}', 'MhcController@mhcEdit');
+        $router->patch('/mhc/{id}', 'MhcController@mhcUpdate');
+        $router->delete('/mhc/{id}', 'MhcController@mhcDestroy');
+
+        // subcription license router End
+
 
 
     });

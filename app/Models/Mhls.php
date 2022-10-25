@@ -10,4 +10,7 @@ class Mhls extends Model
     protected $fillable = [
         'lg_id',
     ];
+    public function mhcId() {
+        return $this->hasMany('App\Models\Mhcs','cgl_id');
+    }
 }

@@ -71,7 +71,7 @@ class MhlController extends Controller
         try {
             if(!empty($id)){
                 $mhlsEdit = Mhls::where('l_id','=', $id)->get();
-                return response()->json(['status' => '200', 'message' => 'Data Save Successfully', 'Data'=> $mhlsEdit]);
+                return response()->json(['status' => '200', 'message' => 'Data Edit Successfully', 'Data'=> $mhlsEdit]);
             }
             
         } catch (\Exception $e) {

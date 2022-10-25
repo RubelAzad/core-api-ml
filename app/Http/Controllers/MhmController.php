@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\MhmFormRequest;
 use App\Models\Mhms;
 
 class MhmController extends Controller
@@ -72,7 +73,7 @@ class MhmController extends Controller
         try {
             if(!empty($id)){
                 $mhmEdit = Mhms::where('m_id','=', $id)->get();
-                return response()->json(['status' => '200', 'message' => 'Data Save Successfully', 'Data'=> $mhmEdit]);
+                return response()->json(['status' => '200', 'message' => 'Data Edit Successfully', 'Data'=> $mhmEdit]);
             }
             
         } catch (\Exception $e) {
@@ -90,7 +91,7 @@ class MhmController extends Controller
      * created_at:- 24/10/2022 11:55:54
      * description :- id wise update
      */
-    public function mhmUpdate(Request $request, $id)
+    public function mhmUpdate(MhmFormRequest $request, $id)
     {
         try {
             $mhmUpdate = Mhms::where('m_id', '=', $request->id)->first();
